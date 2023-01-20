@@ -26,6 +26,7 @@ export default function MyHeader() {
       </Box>
 
       <Input
+        backgroundImage="./env/grain.svg"
         mt="20px"
         fontSize={12}
         rounded="full"
@@ -38,11 +39,11 @@ export default function MyHeader() {
         color="#C5C5C5"
         _placeholder={{
           fontWeight: "regular",
-
           color: "#8E8E8E",
         }}
       />
       <Input
+        backgroundImage="./env/grain.svg"
         mt="12px"
         fontSize={12}
         rounded="full"

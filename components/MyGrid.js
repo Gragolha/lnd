@@ -8,6 +8,7 @@ export default function MyGrid({ children, background }) {
       w="auto"
       background={background}
       backgroundPosition="center"
+      backgroundAttachment="fixed"
       h="850px"
       backgroundRepeat="no-repeat"
       backgroundSize="cover"

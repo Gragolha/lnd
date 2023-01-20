@@ -6,6 +6,7 @@ import Layout from "../components/Bg/LtLayout";
 import MyHeader from "../components/Header/MyHeader";
 import { GridItem } from "@chakra-ui/react";
 import MyMain from "../components/Main/MyMain";
+import MyBg from "../components/Main/MyBg";
 
 export default function Home() {
   return (
@@ -28,10 +29,12 @@ export default function Home() {
           <GridItem colStart={[1, 1, 1, 1]} colSpan={[4, 4, 4, 4]}>
             <MyHeader />
           </GridItem>
+
           <GridItem colStart={[1, 1, 1, 1]} colSpan={[5, 8, 12, 12]}>
             <MyMain />
           </GridItem>
         </MyGrid>
+        <MyBg />
       </Layout>
     </>
   );
