@@ -26,7 +26,7 @@ export default function Home() {
 
       <Layout>
         <MyGrid background="linear-gradient(180deg, rgba(21, 21, 21, 0) 77.6%, #151515 100%), url(bg1.png)">
-          <GridItem colStart={[1, 1, 1, 1]} colSpan={[4, 4, 4, 4]}>
+          <GridItem colStart={[1, 1, 1, 1]} colSpan={[5, 6, 4, 4]}>
             <MyHeader />
           </GridItem>
 

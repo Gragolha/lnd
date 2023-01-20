@@ -4,7 +4,8 @@ export default function MyHeader() {
   return (
     <Flex
       zIndex="3"
-      w="404px"
+      w={["none", "none", "404px", "404px"]}
+      maxH="404px"
       mt={["230", "230", "250", "250"]}
       fontFamily="inter"
       flexDir="column"
