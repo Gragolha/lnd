@@ -6,6 +6,7 @@ import {
   Input,
   Box,
   Image,
+  Tooltip,
 } from "@chakra-ui/react";
 import MyGrid from "./MyGrid";
 
@@ -110,14 +111,28 @@ export default function Navbar() {
             justifySelf="center"
             px="12px"
           >
-            <Box
-              w="37px"
-              h="37px"
-              bgImage="/perfil.jpg"
-              backgroundPosition="center"
-              backgroundSize="cover"
-              rounded={90}
-            />
+            <Tooltip
+              label="É só para dar estilo"
+              bgColor="rgba(52,52,52,0.5)"
+              backdropFilter="auto"
+              backdropSaturate="300%"
+              backdropBlur="20px"
+              p="10px"
+              rounded="full"
+              fontSize={12}
+              placement="bottom-end"
+              mt="10px"
+              color="#c5c5c5"
+            >
+              <Box
+                w="37px"
+                h="37px"
+                bgImage="/perfil.jpg"
+                backgroundPosition="center"
+                backgroundSize="cover"
+                rounded={90}
+              />
+            </Tooltip>
           </GridItem>
         </Grid>
       </Flex>

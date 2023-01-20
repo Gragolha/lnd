@@ -14,10 +14,11 @@ export default function MyHeader() {
         fontSize={48}
         color="white"
         textShadow="0px 0px 40px rgba(255, 255, 255, 0.25)"
+        cursor="default"
       >
         TITLE HEADER
       </Box>
-      <Box fontWeight="regular" fontSize={16} color="#C5C5C5">
+      <Box fontWeight="regular" fontSize={16} color="#C5C5C5" cursor="default">
         Mussum Ipsum, cacilds vidis litro abertis. Mé faiz elementum girarzis,
         nisi eros vermeio.Quem num gosta di mim que vai caçá sua turmis!Sapien
         in monti palavris qui num significa nadis i pareci latim.Leite de

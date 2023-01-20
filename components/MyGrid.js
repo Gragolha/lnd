@@ -8,9 +8,9 @@ export default function MyGrid({ children, background }) {
       w="auto"
       background={background}
       backgroundPosition="center"
+      h="850px"
       backgroundRepeat="no-repeat"
       backgroundSize="cover"
-      height="853px"
       px="20px"
     >
       <Grid
