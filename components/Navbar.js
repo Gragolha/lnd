@@ -62,6 +62,7 @@ export default function Navbar() {
               bgColor="rgba(56,56,56,0.3)"
               borderColor="rgba(87,87,87,0.2)"
               rounded="90px"
+              focusBorderColor="#D2431B"
               _placeholder={{
                 color: "#8C8C8C",
                 fontSize: "12px",
