@@ -65,11 +65,11 @@ export default function MyHeader() {
         rounded="full"
         fontWeight=""
         transition="0.5s"
-        bgColor="#0A84FF"
+        bgColor="#D2431B"
         color="white"
-        boxShadow="0px 0px 40px #0A84FF"
+        boxShadow="0px 0px 40px #D2431B"
         _hover={{
-          bgGradient: "linear(to-r, #0A84FF 0%, #12D8FA 51%, #0A84FF 100%)",
+          bgGradient: "linear(to-r, #D2431B 0%, #ed722f 51%, #D2431B 100%)",
           transform: "scale(1.05)",
           transition: "0.5s",
         }}

@@ -4,9 +4,10 @@ import Navbar from "../components/Navbar";
 import MyGrid from "../components/MyGrid";
 import Layout from "../components/Bg/LtLayout";
 import MyHeader from "../components/Header/MyHeader";
-import { GridItem } from "@chakra-ui/react";
+import { Divider, Flex, GridItem } from "@chakra-ui/react";
 import MyMain from "../components/Main/MyMain";
 import MyBg from "../components/Main/MyBg";
+import MyWork from "../components/Main work/MyWork";
 
 export default function Home() {
   return (
@@ -32,6 +33,17 @@ export default function Home() {
 
           <GridItem colStart={[1, 1, 1, 1]} colSpan={[5, 8, 12, 12]}>
             <MyMain />
+          </GridItem>
+          <GridItem
+            borderColor="rgba(255,255,255,0.05)"
+            colStart={[1, 1, 1, 1]}
+            colSpan={[5, 8, 12, 12]}
+            mt="10px"
+          >
+            <Divider />
+          </GridItem>
+          <GridItem colStart={[1, 1, 1, 1]} colSpan={[5, 8, 12, 12]}>
+            <MyWork />
           </GridItem>
         </MyGrid>
         <MyBg />
