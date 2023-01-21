@@ -40,9 +40,13 @@ export default function MyMain() {
           mt="auto"
           ml="auto"
           color="white"
+          px="25px"
           rounded={20}
           backdropFilter="auto"
-          _hover={{ backdropSaturate: "300%" }}
+          _hover={{
+            bgColor: "#D2431B",
+            transform: "scale(1.05)",
+          }}
           bgColor="rgba(255,255,255,0.2)"
         >
           More info

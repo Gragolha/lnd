@@ -8,7 +8,6 @@ import {
   Image,
   Tooltip,
 } from "@chakra-ui/react";
-import MyGrid from "./MyGrid";
 
 import Link from "next/link";
 

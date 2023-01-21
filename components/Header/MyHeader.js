@@ -65,15 +65,15 @@ export default function MyHeader() {
         ml="auto"
         maxW="300px"
         rounded="full"
-        fontWeight=""
-        transition="0.5s"
+        fontWeight="regular"
+        transition="0.4s"
         bgColor="#D2431B"
         color="white"
-        boxShadow="0px 0px 40px #D2431B"
         _hover={{
           bgGradient: "linear(to-r, #D2431B 0%, #ed722f 51%, #D2431B 100%)",
           transform: "scale(1.05)",
-          transition: "0.5s",
+          transition: "0.4s",
+          boxShadow: "0px 0px 90px #D2431B",
         }}
       >
         Agendar consulta
