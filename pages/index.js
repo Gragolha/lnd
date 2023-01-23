@@ -8,6 +8,8 @@ import { Divider, Flex, GridItem } from "@chakra-ui/react";
 import MyMain from "../components/Main/MyMain";
 import MyBg from "../components/Main/MyBg";
 import MyWork from "../components/Main work/MyWork";
+import MyMission from "../components/Main mission/MainM";
+import Myimg from "../components/Main work/Myimg";
 
 export default function Home() {
   return (
@@ -34,16 +36,15 @@ export default function Home() {
           <GridItem colStart={[1, 1, 1, 1]} colSpan={[5, 8, 12, 12]}>
             <MyMain />
           </GridItem>
-          <GridItem
-            borderColor="rgba(255,255,255,0.05)"
-            colStart={[1, 1, 1, 1]}
-            colSpan={[5, 8, 12, 12]}
-            mt="10px"
-          >
-            <Divider />
+
+          <GridItem colStart={[1, 1, 1, 1]} colSpan={[5, 8, 12, 12]}>
+            <MyMission />
+          </GridItem>
+          <GridItem colStart={[1, 1, 1, 1]} colSpan={[5, 8, 12, 12]} mt="170px">
+            <MyWork />
           </GridItem>
           <GridItem colStart={[1, 1, 1, 1]} colSpan={[5, 8, 12, 12]}>
-            <MyWork />
+            <Myimg />
           </GridItem>
         </MyGrid>
         <MyBg />
