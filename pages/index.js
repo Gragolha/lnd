@@ -1,17 +1,54 @@
 import Head from "next/head";
 
-import Navbar from "../components/Navbar";
 import MyGrid from "../components/MyGrid";
 import Layout from "../components/Bg/LtLayout";
 import MyHeader from "../components/Header/MyHeader";
-import { Divider, Flex, GridItem } from "@chakra-ui/react";
+import { CaretLeft, CaretRight } from "phosphor-react";
+import {
+  Box,
+  Icon,
+  Flex,
+  GridItem,
+  Modal,
+  ModalContent,
+  ModalFooter,
+  ModalOverlay,
+  useDisclosure,
+  Center,
+} from "@chakra-ui/react";
 import MyMain from "../components/Main/MyMain";
 import MyBg from "../components/Main/MyBg";
 import MyWork from "../components/Main work/MyWork";
 import MyMission from "../components/Main mission/MainM";
 import Myimg from "../components/Main work/Myimg";
+import { useState } from "react";
 
 export default function Home() {
+  const [modalImage, setModalImage] = useState(0);
+  const listImg = [
+    "/bg2.png",
+    "/bg1.png",
+    "/bg3.png",
+    "/bg4.png",
+    "/bg5.png",
+    "/bg6.png",
+  ];
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  function increase() {
+    if (modalImage === listImg.length - 1) {
+      return 0;
+    }
+    return modalImage + 1;
+  }
+
+  function decrease() {
+    if (modalImage === 0) {
+      return listImg.length - 1;
+    }
+    return modalImage - 1;
+  }
+
   return (
     <>
       <Head>
@@ -25,6 +62,7 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;700;800;900&display=swap"
           rel="stylesheet"
         />
+        <style type="text/css"></style>
       </Head>
 
       <Layout>
@@ -44,11 +82,103 @@ export default function Home() {
             <MyWork />
           </GridItem>
           <GridItem colStart={[1, 1, 1, 1]} colSpan={[5, 8, 12, 12]}>
-            <Myimg />
+            <Myimg onOpen={onOpen} setModalImage={setModalImage} />
           </GridItem>
         </MyGrid>
         <MyBg />
       </Layout>
+      <Modal isOpen={isOpen} onClose={onClose} size="5xl" isCentered>
+        <ModalOverlay
+          backdropFilter="blur(50px) saturate(10%)"
+          backgroundImage="/env/grain.svg"
+        />
+
+        <ModalContent h="880px" bgColor="transparent" boxShadow="none">
+          <Flex h="100%" fontSize="64px" color="white">
+            <Icon
+              transition="0.2s"
+              _hover={{
+                transform: "scale(1.5)",
+                transition: "0.2s",
+              }}
+              cursor="pointer"
+              onClick={() => setModalImage(decrease())}
+              my="auto"
+              as={CaretLeft}
+            />
+            <Box
+              boxShadow="dark-lg"
+              mx="auto"
+              rounded={16}
+              w="768px"
+              h="100%"
+              backgroundImage={listImg[modalImage]}
+              backgroundSize="cover"
+              backgroundRepeat="no-repeat"
+              backgroundPosition="center"
+            />
+            <Icon
+              transition="0.2s"
+              _hover={{
+                transform: "scale(1.5)",
+                transition: "0.2s",
+              }}
+              cursor="pointer"
+              onClick={() => setModalImage(increase())}
+              my="auto"
+              as={CaretRight}
+            />
+          </Flex>
+          <ModalFooter>
+            <Center w="100%" color="white" gap="24px">
+              <Box
+                border="1px"
+                borderColor="rgba(255,255,255,0.5)"
+                opacity="50%"
+                w="120px"
+                h="70px"
+                transition="transform 0.2s"
+                _hover={{
+                  transform: "scale(1.1)",
+                }}
+                bgImage={listImg[decrease()]}
+                onClick={() => setModalImage(decrease())}
+                cursor="pointer"
+                bgPosition="center"
+                bgSize="cover"
+                rounded={8}
+              />
+              <Box
+                border="2px solid #D2431B"
+                boxShadow="0px 0px 80px rgba(210, 67, 27,0.2)"
+                w="180px"
+                h="100px"
+                bgImage={listImg[modalImage]}
+                bgPosition="center"
+                bgSize="cover"
+                rounded={8}
+              />
+              <Box
+                border="1px"
+                borderColor="rgba(255,255,255,0.5)"
+                opacity="50%"
+                w="140px"
+                h="70px"
+                transition="transform 0.2s"
+                _hover={{
+                  transform: "scale(1.1)",
+                }}
+                onClick={() => setModalImage(increase())}
+                bgImage={listImg[increase()]}
+                cursor="pointer"
+                bgPosition="center"
+                bgSize="cover"
+                rounded={8}
+              />
+            </Center>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </>
   );
 }

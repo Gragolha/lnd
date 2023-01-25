@@ -20,9 +20,7 @@ export default function Navbar() {
         backgroundImage="./env/grain.svg"
         fontFamily="Inter"
         rounded={90}
-        backdropFilter="auto"
-        backdropBlur="20px"
-        backdropSaturate="200%"
+        backdropFilter="blur(20px) saturate(200%)"
         position="fixed"
         mt="100px"
         h="60px"
