@@ -4,6 +4,7 @@ import MyGrid from "../MyGrid";
 export default function MyMain() {
   return (
     <Flex
+      cursor="default"
       fontFamily="inter"
       background="url(./env/grain.svg),linear-gradient(259.41deg, rgba(208, 68, 27, 0.2) 5.42%, rgba(0, 0, 0, 0) 55.73%), #1B1B1B"
       zIndex="5"

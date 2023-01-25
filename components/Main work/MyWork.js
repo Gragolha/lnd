@@ -3,7 +3,7 @@ import { Divider, Flex } from "@chakra-ui/react";
 export default function MyWork() {
   return (
     <>
-      <Flex fontFamily="inter">
+      <Flex fontFamily="inter" cursor="default">
         <Flex
           fontSize={40}
           fontWeight="bold"

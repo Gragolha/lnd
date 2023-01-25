@@ -3,6 +3,7 @@ import { Divider, Flex } from "@chakra-ui/react";
 export default function MyMission() {
   return (
     <Flex
+      cursor="default"
       fontFamily="inter"
       flexDir="column"
       h="300px"
